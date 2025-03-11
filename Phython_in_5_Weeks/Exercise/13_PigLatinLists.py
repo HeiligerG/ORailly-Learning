@@ -1,7 +1,11 @@
 sentence = str.lower(input("Enter a sentence: ")).strip()
 
+output = []
+
 for word in sentence.split():
     if word[0] in 'aeiou':
-        print(word + 'way')
+        output.append(word + 'way')
     else:
-        print(word[1:] + word[0] + 'ay')
+        output.append(word[1:] + word[0] + 'ay')
+
+print(' '.join(output))
