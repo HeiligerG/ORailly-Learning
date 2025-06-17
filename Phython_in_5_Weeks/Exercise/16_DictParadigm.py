@@ -1,16 +1,16 @@
-counts = {'vowels':0, 'digits':0, 'others':0}
+counts = {'vowels':[], 'digits':[], 'others':[]}
 
-text = input('Enter a string: ').strip()
+text = input('Enter a string: ').strip().lower()
 
 for char in text:
 
     if char in 'aeiou':
-        counts['vowels'] +=1
-    
+        counts['vowels'].append(char)
+
     elif char.isdigit():
-        counts['digits'] +=1
+        counts['digits'].append(char)
 
     else:
-        counts['others'] +=1
+        counts['others'].append(char)
 
 print(counts)
